@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch (lldb)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/workspaces/TD/TD202040927/app",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false
+        }
+,    
+        {
+            "name": "td",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/workspaces/TD/TD202040927/app",
+            "args": [
+                "123", "456"
+            ],
+            "stopAtEntry": false,
+            "cwd": "/workspaces/TD/TD202040927/",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build app in active directory",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
