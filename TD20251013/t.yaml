@@ -1,0 +1,15 @@
+tests:
+  - name: test 1
+    stdin: "245.27 240 241"
+    stdout:
+      - contains: "29"
+
+  - name: test 2
+    stdin: "5.972e21 1998e24 149.6e6"
+    stdout:
+      - contains: "35.4e+22"
+
+  - name: test 3
+    stdin: "5.972e21 420 670"
+    stdout:
+      - contains: "3.73+e6"
