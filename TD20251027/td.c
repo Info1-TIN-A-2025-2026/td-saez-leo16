@@ -31,13 +31,19 @@ int main(int argc, const char *argv[])
 	printf("%d\n", ++a); // 11
 	*/
 
-	bool isPrime;
+	// PRINT PRIME NUMBER
+	const unsigned int I_MIN = 2;
+	const unsigned int I_MAX = 100;
 
-	for (int i = 2; i <= 100; i++)
+	bool isPrime = true;
+	unsigned int i = 0;
+	unsigned int j = 0;
+
+	for (i = I_MIN; i <= I_MAX; i++)
 	{
 		isPrime = true;
 
-		for (int j = 2; j * j <= i; j++)
+		for (j = I_MIN; j * j <= i; j++)
 		{
 			if (i % j == 0)
 			{
@@ -48,9 +54,11 @@ int main(int argc, const char *argv[])
 
 		if (isPrime)
 		{
-			printf("%d\n", i);
+			printf("%u ", i);
 		}
 	}
+
+	printf("\n");
 
 	return 0;
 }
