@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <stdlib.h>
 
 int main(int argc, const char *argv[])
 {
+
 	// Boucle While()
 	/*const unsigned int BASE = 10;
 

@@ -1,0 +1,18 @@
+tests:
+  - name: test 1
+    stdin: "-13 -3"
+    stdout:
+      - contains: "a/b = 4"
+      - contains: "a%b = -1"
+
+  - name: test 2
+    stdin: "-13 3"
+    stdout:
+      - contains: "a/b = -4"
+      - contains: "a%b = -1"
+
+  - name: test 3
+    stdin: "17 -3"
+    stdout:
+      - contains: "a/b = -5"
+      - contains: "a%b = 2"
