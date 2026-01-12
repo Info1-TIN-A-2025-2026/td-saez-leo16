@@ -41,6 +41,7 @@ unsigned long count_rising_edge(const char *signal, const unsigned long num_samp
 
 void rle(const char *signal, const unsigned long num_samples)
 {
+    unsigned long symbols = 0;
     unsigned long count = 1;
     char state = signal[0]; // only if num_samples > 0
     printf("%d,", state);
@@ -55,10 +56,15 @@ void rle(const char *signal, const unsigned long num_samples)
         else
         {
             printf("%lu,", count);
+            symbols++;
             count = 1;
             state = 1 - state;
         }
     }
 
-    printf("%lu", count);
+    printf("%lu\n", count);
+    symbols++;
+    printf("num symbols in rle: %lu\n", symbols);
+    printf("compression rate: x%.1lf\n", (double)num_samples / symbols);
+    puts("");
 }
